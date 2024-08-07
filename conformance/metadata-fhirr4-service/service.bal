@@ -47,7 +47,7 @@ service / on new fhirr4:Listener(9090, apiConfig) {
     # capability may be used for system compatibility testing, code generation, or as the basis for a conformance assessment.
     # For further information https://hl7.org/fhir/capabilitystatement.html
     # + return - capability statement as a json
-    isolated resource function get .(r4:FHIRContext fhirContext) returns international401:CapabilityStatement|r4:OperationOutcome {
+    isolated resource function get fhir/r4/metadata(r4:FHIRContext fhirContext) returns international401:CapabilityStatement|r4:OperationOutcome {
         international401:CapabilityStatement|error response = capabilityStatement;
         if response is international401:CapabilityStatement {
             log:printDebug("Capability statement served successfully.");
