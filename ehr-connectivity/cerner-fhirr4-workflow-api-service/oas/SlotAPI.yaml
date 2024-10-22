@@ -69,7 +69,7 @@ paths:
         schema:
           type: string
         x-wso2-oh-fhirType: token
-      - name: start
+      - name: end
         in: query
         description: Appointment date/time
         required: true
