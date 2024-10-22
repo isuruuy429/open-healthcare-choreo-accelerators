@@ -68,11 +68,25 @@ paths:
         required: false
         schema:
           type: string
-        x-wso2-oh-fhirType: date
+        x-wso2-oh-fhirType: token
+      - name: start
+        in: query
+        description: Appointment date/time
+        required: true
+        schema:
+          type: string
+        x-wso2-oh-fhirType: token
       - name: service-type
         in: query
         description: The type of appointments that can be booked into the slot
         required: false
+        schema:
+          type: string
+        x-wso2-oh-fhirType: token
+      - name: practitioner
+        in: query
+        description: The related practitioner for the selected slot.
+        required: true
         schema:
           type: string
         x-wso2-oh-fhirType: token
